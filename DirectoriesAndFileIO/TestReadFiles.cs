@@ -59,6 +59,12 @@ namespace DirectoriesAndFileIO
             Assert.AreEqual(1, lines.Length);
             Assert.AreEqual(fileAContents, lines[0]);
         }
+        [TestMethod]
+        public void TestFileOpenfiles()
+        {
+            StreamReader s = new StreamReader(file);
+        }
+
 
         [TestMethod]
         public void TestStreamReader()
@@ -67,7 +73,7 @@ namespace DirectoriesAndFileIO
 
             string txt = s.ReadToEnd();
             Assert.AreEqual(fileAContents, txt);
-
+            
             s.Close();
         }
 
